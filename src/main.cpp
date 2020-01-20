@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <cstring>
 
-std::string strip_punctuation(std::string s) {
+std::string strip_punctuation(std::string s) { // TODO: don't strip accent marks like "é"
     for (int i = 0; i < s.size(); i++) {
         if (s[i] < 'A' || s[i] > 'Z' && s[i] < 'a' || s[i] > 'z') { 
             s.erase(i, 1);
